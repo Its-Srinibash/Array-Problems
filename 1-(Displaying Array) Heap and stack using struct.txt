@@ -1,0 +1,69 @@
+// Array fisplay function using struct
+
+//  Stack and Heap both type display
+
+
+
+// Heap
+
+#include<iostream>
+using namespace std;
+
+struct Array{
+int *A;
+int size;
+int length;
+};
+
+void Display(struct Array arr){
+for(int i=0;i<arr.length;i++){
+    cout<<arr.A[i]<<"  ";
+}
+}
+int main(){
+
+int n;
+struct Array arr;
+
+cout<<"Enter size of an Array";
+cin>>arr.size;
+arr.A=new int[arr.size];
+arr.length=0;
+
+cout<<"Enter how many element";
+cin>>n;
+
+cout<<"Enter elements you want to insert";
+for(int i=0;i<n;i++){
+    cin>> arr.A[i];
+}
+arr.length=n;
+Display(arr);
+
+}
+
+
+// Stack
+
+#include<iostream>
+using namespace std;
+
+struct Array{
+int A[20];
+int size;
+int length;
+};
+
+void Display(struct Array arr){
+for(int i=0;i<arr.length;i++){
+    cout<<arr.A[i]<<"  ";
+}
+}
+int main(){
+
+int n;
+struct Array arr{{1,2,3,4,5},20,5};
+
+Display(arr);
+
+}
